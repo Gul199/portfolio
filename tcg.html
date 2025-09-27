@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Test Case Generator</title>
+  <link rel="stylesheet" href="css/tcg.css" />
+  <script src="js/tcg.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Test Case Generator</h1>
+    
+    <!-- Test case input form -->
+    <form id="testCaseForm">
+      <label for="title">Test Case Title:</label>
+      <input type="text" id="title" name="title" placeholder="Enter test case title" required />
+
+      <label for="preconditions">Preconditions:</label>
+      <textarea id="preconditions" name="preconditions" placeholder="List any preconditions" rows="3"></textarea>
+
+      <label for="steps">Test Steps:</label>
+      <textarea id="steps" name="steps" placeholder="Describe the test steps" rows="5" required></textarea>
+
+      <label for="expectedResult">Expected Result:</label>
+      <textarea id="expectedResult" name="expectedResult" placeholder="Describe expected outcome" rows="3" required></textarea>
+
+      <button type="submit">Generate Test Case</button>
+    </form>
+
+    <!-- Output area -->
+    <section id="outputSection" style="display:none;">
+      <h2>Generated Test Case</h2>
+      <textarea id="output" readonly rows="10"></textarea>
+      <button id="copyBtn">Copy to Clipboard</button>
+    </section>
+  </main>
+
+  
+</body>
+</html>

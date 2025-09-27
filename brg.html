@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bug Report Generator</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="css/brg.css" />
+  <script src="js/brg.js"></script>
+</head>
+<body>
+
+  <!-- Bug Report Generator Section -->
+  <h1>QA Bug Report Template Generator</h1>
+
+  <!-- Form for bug report inputs -->
+  <form id="bugForm">
+    <label for="title">Bug Title:</label>
+    <input type="text" id="title" name="title" required />
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" rows="4" required></textarea>
+
+    <label for="severity">Severity:</label>
+    <select id="severity" name="severity" required>
+      <option value="">-- Select Severity --</option>
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+      <option value="Critical">Critical</option>
+    </select>
+
+    <label for="steps">Steps to Reproduce:</label>
+    <textarea id="steps" name="steps" rows="4" required></textarea>
+
+    <label for="environment">Environment:</label>
+    <input
+      type="text"
+      id="environment"
+      name="environment"
+      placeholder="e.g. Windows 10, Chrome 115"
+      required
+    />
+
+    <button type="submit">Generate Bug Report</button>
+  </form>
+
+  <!-- Output area for generated report -->
+  <h2>Generated Bug Report:</h2>
+  <textarea id="output" readonly></textarea>
+  <button id="copyBtn" style="display: none;">Copy to Clipboard</button>
+
+  <!-- Link to external JS -->
+  
+</body>
+</html>
+
