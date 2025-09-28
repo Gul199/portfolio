@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #444;
+}
+
+header nav a:hover {
+  color: #4f46e5;
+}
+
+#darkModeToggle {
+  padding: 6px 12px;
+  border: 1px solid #4f46e5;
+  background: none;
+  color: #4f46e5;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#darkModeToggle:hover {
+  background: #4f46e5;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  background: #4f46e5;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero img {
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Article */
+main img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+article h2 {
+  color: #4f46e5;
+}
+
+/* About */
+.about {
+  background: #f3f4f6;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.about img {
+  margin-top: 20px;
+  max-height: 250px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  background: #111827;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #1f2937;
+  color: #e5e7eb;
+}
+
+body.dark-mode header {
+  background: #111827;
+  color: #e5e7eb;
+}
+
+body.dark-mode footer {
+  background: #0f172a;
+}
+
+/* Navigation */
+header nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #444;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #4f46e5; /* Indigo on hover */
+}
+
+/* Optional underline animation effect */
+header nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #4f46e5;
+  transition: width 0.3s ease;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
