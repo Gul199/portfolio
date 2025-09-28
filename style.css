@@ -110,10 +110,29 @@ footer {
 }
 
 /* Responsive styles for smaller screens */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex; /* Show hamburger on mobile */
+  @media (max-width: 768px) {
+  .nav-links {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    background: #333;
+    position: fixed;       /* fixed so it floats above content */
+    top: 60px;             /* adjust based on header height */
+    right: 0;              /* align to right */
+    width: 200px;          /* or 80% for full mobile width */
+    padding: 1rem;
+    border-radius: 0 0 0 8px;
+    z-index: 1000;         /* make sure it’s on top */
   }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-bottom: 1rem;
+  }
+}
+
 
   .nav-links {
     display: none; /* Hide nav links by default on mobile */
@@ -208,3 +227,4 @@ footer {
 .project-card .button:last-child {
   margin-bottom: 0;
 }
+
